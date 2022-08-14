@@ -1,0 +1,11 @@
+git clone https://github.com/steveicarus/iverilog.git 
+cd iverilog/
+sh autoconf.sh 
+./configure
+make clean
+make -j8 
+sudo make install 
+
+sudo apt-get install gtkwave 
+
+01_connecting_modules$ iverilog -o app *.v
