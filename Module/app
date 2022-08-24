@@ -7,42 +7,47 @@
 :vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
 :vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
 :vpi_module "/usr/local/lib/ivl/va_math.vpi";
-S_0x563fbbf77330 .scope module, "top_module" "top_module" 2 17;
+S_0x5654ac87ad90 .scope module, "top_module" "top_module" 2 11;
  .timescale 0 0;
-    .port_info 0 /INPUT 1 "a";
-    .port_info 1 /INPUT 1 "b";
-    .port_info 2 /INPUT 1 "c";
-    .port_info 3 /INPUT 1 "d";
-    .port_info 4 /OUTPUT 1 "out1";
-    .port_info 5 /OUTPUT 1 "out2";
-o0x7f78b9b18018 .functor BUFZ 1, C4<z>; HiZ drive
-v0x563fbbf87220_0 .net "a", 0 0, o0x7f78b9b18018;  0 drivers
-o0x7f78b9b18048 .functor BUFZ 1, C4<z>; HiZ drive
-v0x563fbbf872e0_0 .net "b", 0 0, o0x7f78b9b18048;  0 drivers
-o0x7f78b9b18078 .functor BUFZ 1, C4<z>; HiZ drive
-v0x563fbbf873b0_0 .net "c", 0 0, o0x7f78b9b18078;  0 drivers
-o0x7f78b9b180a8 .functor BUFZ 1, C4<z>; HiZ drive
-v0x563fbbf874b0_0 .net "d", 0 0, o0x7f78b9b180a8;  0 drivers
-o0x7f78b9b180d8 .functor BUFZ 1, C4<z>; HiZ drive
-v0x563fbbf87580_0 .net "out1", 0 0, o0x7f78b9b180d8;  0 drivers
-o0x7f78b9b18108 .functor BUFZ 1, C4<z>; HiZ drive
-v0x563fbbf87670_0 .net "out2", 0 0, o0x7f78b9b18108;  0 drivers
-S_0x563fbbf77560 .scope module, "inst1" "mod_a" 2 26, 2 7 0, S_0x563fbbf77330;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "d";
+    .port_info 2 /OUTPUT 1 "q";
+o0x7fed0dcde018 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5654ac88bee0_0 .net "clk", 0 0, o0x7fed0dcde018;  0 drivers
+o0x7fed0dcde048 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5654ac88bf80_0 .net "d", 0 0, o0x7fed0dcde048;  0 drivers
+o0x7fed0dcde1f8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5654ac88c070_0 .net "q", 0 0, o0x7fed0dcde1f8;  0 drivers
+o0x7fed0dcde078 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5654ac88c170_0 .net "q_df1", 0 0, o0x7fed0dcde078;  0 drivers
+o0x7fed0dcde138 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5654ac88c260_0 .net "q_df2", 0 0, o0x7fed0dcde138;  0 drivers
+S_0x5654ac87af70 .scope module, "df1" "my_dff" 2 19, 2 4 0, S_0x5654ac87ad90;
  .timescale 0 0;
-    .port_info 0 /OUTPUT 1 "out1";
-    .port_info 1 /OUTPUT 1 "out2";
-    .port_info 2 /INPUT 1 "in1";
-    .port_info 3 /INPUT 1 "in2";
-    .port_info 4 /INPUT 1 "in3";
-    .port_info 5 /INPUT 1 "in4";
-v0x563fbbf3ed90_0 .net "in1", 0 0, o0x7f78b9b18018;  alias, 0 drivers
-v0x563fbbf86d70_0 .net "in2", 0 0, o0x7f78b9b18048;  alias, 0 drivers
-v0x563fbbf86e30_0 .net "in3", 0 0, o0x7f78b9b18078;  alias, 0 drivers
-v0x563fbbf86ed0_0 .net "in4", 0 0, o0x7f78b9b180a8;  alias, 0 drivers
-v0x563fbbf86f90_0 .net "out1", 0 0, o0x7f78b9b180d8;  alias, 0 drivers
-v0x563fbbf870a0_0 .net "out2", 0 0, o0x7f78b9b18108;  alias, 0 drivers
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "d";
+    .port_info 2 /OUTPUT 1 "q";
+v0x5654ac843ab0_0 .net "clk", 0 0, o0x7fed0dcde018;  alias, 0 drivers
+v0x5654ac8442f0_0 .net "d", 0 0, o0x7fed0dcde048;  alias, 0 drivers
+v0x5654ac88b3a0_0 .net "q", 0 0, o0x7fed0dcde078;  alias, 0 drivers
+S_0x5654ac88b4c0 .scope module, "df2" "my_dff" 2 20, 2 4 0, S_0x5654ac87ad90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "d";
+    .port_info 2 /OUTPUT 1 "q";
+v0x5654ac88b6f0_0 .net "clk", 0 0, o0x7fed0dcde018;  alias, 0 drivers
+v0x5654ac88b7e0_0 .net "d", 0 0, o0x7fed0dcde078;  alias, 0 drivers
+v0x5654ac88b8b0_0 .net "q", 0 0, o0x7fed0dcde138;  alias, 0 drivers
+S_0x5654ac88b9c0 .scope module, "df3" "my_dff" 2 21, 2 4 0, S_0x5654ac87ad90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "d";
+    .port_info 2 /OUTPUT 1 "q";
+v0x5654ac88bc20_0 .net "clk", 0 0, o0x7fed0dcde018;  alias, 0 drivers
+v0x5654ac88bd10_0 .net "d", 0 0, o0x7fed0dcde138;  alias, 0 drivers
+v0x5654ac88bdd0_0 .net "q", 0 0, o0x7fed0dcde1f8;  alias, 0 drivers
 # The file index is used to find the file name in the following table.
 :file_names 3;
     "N/A";
     "<interactive>";
-    "03_mod_conn_ports_by_name.v";
+    "04_mod_connect_3_mods.v";
